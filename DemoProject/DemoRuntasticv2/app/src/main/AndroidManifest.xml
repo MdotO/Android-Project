@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="mdoto.demoruntasticv2">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <application
+            android:name=".StartUpModule.ParseInitializer"
+            android:allowBackup="true"
+            android:icon="@mipmap/demo_runtastic"
+            android:label="Demoruntastic"
+            android:networkSecurityConfig="@xml/all_urls_config"
+            android:theme="@style/AppTheme">
+
+        <activity android:name=".MenuBaseActivity"/>
+        <activity
+                android:name=".ProfilesModule.UserProfile"
+                android:label="@string/title_activity_user__profile"
+             >
+        </activity>
+
+        <meta-data
+                android:name="com.parse.APPLICATION_ID"
+                android:value="@string/parse_app_id"/>
+        <meta-data
+                android:name="com.parse.CLIENT_KEY"
+                android:value="@string/parse_client_key"/>
+        <meta-data
+                android:name="com.parse.SERVER_URL"
+                android:value="@string/parse_server_url"/>
+
+        <activity android:name=".StartUpModule.LoginActivity">
+
+
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN"/>
+
+            <category android:name="android.intent.category.LAUNCHER"/>
+        </intent-filter>
+
+        </activity>
+        <activity android:name=".SentRequestsModule.SendRequestActivity"/>
+        <activity android:name=".ReceivedRequestsModule.ReceiveRequestActivity"/>
+        <activity android:name=".ProfilesModule.NonUserProfile"/>
+        <activity android:name=".ChatModule.ChatActivity">
+          <!--  <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>-->
+        </activity>
+
+        <meta-data
+                android:name="com.google.android.actions"
+                android:resource="@xml/all_urls_config"/>
+    </application>
+
+</manifest>

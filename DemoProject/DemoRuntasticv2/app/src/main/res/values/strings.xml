@@ -1,0 +1,22 @@
+<resources>
+    <string name="parse_server_url">http://ec2-18-224-15-47.us-east-2.compute.amazonaws.com:80/parse/</string>
+    <string name="app_name">DemoRuntasticv2</string>
+    <string name="parse_client_key">eb9f52977683aae2218314417439494196175664</string>
+    <string name="parse_app_id">a540a76160974af3218f9d40ac6fce5b262acc33</string>
+    <string name="title_activity_user__profile">User_Profile</string>
+    <string name="pp_prompt">Add or update your profile picture</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_test">Test</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+</resources>

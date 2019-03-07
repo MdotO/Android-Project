@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+>
+    <include layout="@layout/toolbar" android:id="@+id/include"/>
+
+    <ListView
+            android:id="@+id/chat_listview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/messagetext"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/include"
+            app:layout_constraintVertical_bias="0.0">
+
+    </ListView>
+    <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLines="4"
+            android:backgroundTint="#00000000"
+            android:ellipsize="start"
+            android:inputType="text|textMultiLine"
+            android:hint="Type Message..."
+
+            android:paddingBottom="0dp"
+            android:id="@+id/messagetext"
+            android:paddingRight="5dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/send_chat"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    <Button
+            android:text="Send"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:id="@+id/send_chat"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/messagetext"
+            android:background="@android:color/holo_blue_dark"
+            android:textColor="@color/design_default_color_on_primary" android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintTop_toTopOf="@+id/messagetext"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
